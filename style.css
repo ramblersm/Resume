@@ -3,11 +3,13 @@ body {
   }
   
   .header {
-    background-color: lavender;
-    padding: 20px;
+   
     text-align: center;
     border-bottom: 5px solid teal; /* Add a teal border at the bottom */
-    color: teal; /* Change the text color to teal */
+    color: rgb(255, 255, 255); /* Change the text color to teal */
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
   }
   
   .header h1 {
@@ -50,4 +52,23 @@ body {
     float: right;
     font-size: 20px;
     font-weight: bold;
-  }  
+  }
+  /* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.header.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+#darkModeToggle {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
