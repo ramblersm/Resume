@@ -74,3 +74,14 @@ body.dark-mode {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Style for the download button */
+.content button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
