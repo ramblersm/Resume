@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     closeModalBtn.addEventListener("click", () => {
-      resumeIframe.src = ""; // Clear the iframe source
       modal.style.display = "none";
     });
   
