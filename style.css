@@ -1,32 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f7f9fc;
+    color: #333;
 }
 
 .header {
     text-align: center;
-    border-bottom: 5px solid #2a40b0;
+    border-bottom: 4px solid #4a90e2;
     color: #ffffff;
-    background: radial-gradient(circle, rgba(42,64,176,1) 80%, rgba(70,148,252,1) 100%);
-    padding: 20px 0;
+    background: linear-gradient(135deg, #2a40b0 40%, #4a90e2 100%);
+    padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .header p {
-    font-family: 'Georgia', serif;
-    margin: 5px 0;
-    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .content {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -38,67 +41,84 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
     overflow: auto;
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
     background-color: #ffffff;
     margin: auto;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
     width: 80%;
     max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .close {
-    color: teal;
+    color: #4a90e2;
     float: right;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #2a40b0;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #1a1a1a;
+    background-color: #1e1e2f;
     color: #e0e0e0;
 }
 
 .header.dark-mode {
-    background-color: #000000;
+    background-color: #2a2a3b;
     color: #ffffff;
 }
 
 #darkModeToggle {
-    background-color: teal;
+    background-color: #4a90e2;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #2a40b0;
 }
 
 /* Style for the download button */
 .content button {
-    background-color: #2a40b0;
+    background-color: #4a90e2;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
     font-size: large;
     transition: background-color 0.3s ease;
 }
 
 .content button:hover {
-    background-color: #1a1a7a;
+    background-color: #2a40b0;
 }
 
 #resumeIframe {
@@ -106,4 +126,5 @@ body.dark-mode {
     height: 500px;
     border: none;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
