@@ -1,6 +1,3 @@
-Here is the updated `style.css` to match the enhanced `index.html`:
-
-```css
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -9,6 +6,7 @@ body {
     color: #333;
 }
 
+/* Header styling */
 .header {
     text-align: center;
     border-bottom: 4px solid #4a90e2;
@@ -31,6 +29,7 @@ body {
     font-weight: 300;
 }
 
+/* Contact info styling */
 .contact-info p {
     margin: 5px 0;
 }
@@ -45,6 +44,7 @@ body {
     text-decoration: underline;
 }
 
+/* Content styling */
 .content {
     padding: 40px 20px;
     text-align: center;
@@ -68,6 +68,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Modal styling */
 .modal {
     display: none;
     position: fixed;
@@ -112,7 +113,7 @@ body {
     color: #2a40b0;
 }
 
-/* Dark Mode Styles */
+/* Dark mode styling */
 body.dark-mode {
     background-color: #1e1e2f;
     color: #e0e0e0;
@@ -138,8 +139,8 @@ body.dark-mode {
     background-color: #2a40b0;
 }
 
-/* Style for the buttons */
-.content button {
+/* Button styling */
+.content button, .floating-buttons button {
     background-color: #4a90e2;
     color: white;
     border: none;
@@ -152,7 +153,7 @@ body.dark-mode {
     transition: background-color 0.3s ease;
 }
 
-.content button:hover {
+.content button:hover, .floating-buttons button:hover {
     background-color: #2a40b0;
 }
 
@@ -166,4 +167,72 @@ body.dark-mode {
 
 a[aria-label="Download Resume"] button {
     margin-top: 20px;
+}
+
+/* Floating button container */
+.floating-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-buttons button {
+    margin: 0;
+}
+
+/* Media queries for mobile optimization */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 20px 10px;
+    }
+
+    .skills li, .certifications li {
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    #resumeIframe {
+        height: 400px;
+    }
+
+    .floating-buttons {
+        padding: 10px 5px;
+    }
+
+    .floating-buttons button {
+        padding: 8px 16px;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .floating-buttons button {
+        padding: 6px 12px;
+        font-size: small;
+    }
 }
