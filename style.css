@@ -1,3 +1,6 @@
+Here is the updated `style.css` to match the enhanced `index.html`:
+
+```css
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -28,9 +31,41 @@ body {
     font-weight: 300;
 }
 
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 .content {
     padding: 40px 20px;
     text-align: center;
+}
+
+.skills, .certifications {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li, .certifications li {
+    display: inline-block;
+    margin: 10px 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills li:hover, .certifications li:hover {
+    background-color: #f0f0f0;
 }
 
 .modal {
@@ -103,7 +138,7 @@ body.dark-mode {
     background-color: #2a40b0;
 }
 
-/* Style for the download button */
+/* Style for the buttons */
 .content button {
     background-color: #4a90e2;
     color: white;
@@ -127,4 +162,8 @@ body.dark-mode {
     border: none;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a[aria-label="Download Resume"] button {
+    margin-top: 20px;
 }
