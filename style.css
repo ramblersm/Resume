@@ -147,10 +147,11 @@ body.dark-mode {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
     font-family: 'Playfair Display', serif;
     font-size: large;
     transition: background-color 0.3s ease;
+    width: calc(50% - 20px); /* Ensure equal width with some spacing */
+    margin: 10px 10px 10px 10px;
 }
 
 .content button:hover, .floating-buttons button:hover {
@@ -166,7 +167,7 @@ body.dark-mode {
 }
 
 a[aria-label="Download Resume"] button {
-    margin-top: 20px;
+    margin: 0; /* Remove any margin from the button within the link */
 }
 
 /* Floating button container */
@@ -182,10 +183,6 @@ a[aria-label="Download Resume"] button {
     justify-content: center;
     gap: 10px;
     z-index: 1000;
-}
-
-.floating-buttons button {
-    margin: 0;
 }
 
 /* Media queries for mobile optimization */
@@ -219,6 +216,7 @@ a[aria-label="Download Resume"] button {
     .floating-buttons button {
         padding: 8px 16px;
         font-size: medium;
+        width: auto; /* Adjust width for smaller screens */
     }
 }
 
